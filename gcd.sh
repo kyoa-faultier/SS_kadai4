@@ -1,14 +1,11 @@
 #!/bin/bash
 
 
-if [ $# -gt 2 ]; then
-	echo 入れられる引数は２つまでです
-	exit 1
-elif [ -z $1 ] || [ -z $2 ]; then
-	echo 数字を「２つ」入力してください
+if [ $# -ne 2 ]; then
+	echo 入力できる自然数は「２つ」です
 	exit 1
 elif [[ ! "$1" =~ ^[0-9]+$ ]] || [[ ! "$2" =~ ^[0-9]+$ ]]; then
-	echo 「数字」を２つ入力してください
+	echo 「自然数」を２つ入力してください
 	exit 1
 fi
 
