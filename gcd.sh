@@ -1,26 +1,27 @@
 #!/bin/bash
 
-echo ENTER 2 NUMBERS:
-read a b
 
-if [ -z $a ] || [ -z $b ]; then
-	echo please enter 2 numbers
+if [ $# -gt 2 ]; then
+	echo 入れられる引数は２つまでです
 	exit 1
-elif [[ ! "$a" =~ ^[0-9]+$ ]] || [ ! "$b" =~ ^[0-9]+$ ]]; then
-	echo please enter 2 NUMBERS
+elif [ -z $1 ] || [ -z $2 ]; then
+	echo 数字を「２つ」入力してください
+	exit 1
+elif [[ ! "$1" =~ ^[0-9]+$ ]] || [[ ! "$2" =~ ^[0-9]+$ ]]; then
+	echo 「数字」を２つ入力してください
 	exit 1
 fi
 
 
 
-m=$a
-if [ $b -lt $m ]; then
-	m=$b
+m=$1
+if [ $2 -lt $m ]; then
+	m=$2
 fi
 while [ $m -ne 0 ]
 do
-	x=`expr $a % $m`
-	y=`expr $b % $m`
+	x=`expr $1 % $m`
+	y=`expr $2 % $m`
 	if [ $x -eq 0 -a $y -eq 0 ]; then
 		echo gcd is $m
 		break
