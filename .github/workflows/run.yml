@@ -5,3 +5,4 @@ jobs:
                 runs-on: ubuntu-latest
                 steps:
                         - run: echo "run kadai4"
+                               ./check_gcd_script.sh
