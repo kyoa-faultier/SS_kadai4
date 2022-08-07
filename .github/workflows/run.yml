@@ -8,5 +8,5 @@ jobs:
                         - run: |
                                 cd ..
                                 cd ..
-                                ls
+                                echo $GITHUB_WORKSPACE
                                 bash  check_gcd_script.sh
