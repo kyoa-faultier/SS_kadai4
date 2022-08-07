@@ -10,4 +10,4 @@ jobs:
                                 cd ..
                                 cd ..
                                 echo $GITHUB_WORKSPACE
-                                bash  check_gcd_script.sh
+                                check_gcd_script.sh
