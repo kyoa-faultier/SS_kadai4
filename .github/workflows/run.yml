@@ -4,4 +4,7 @@ jobs:
         check-bats-version:
                 runs-on: ubuntu-latest
                 steps:
-                        - run: bash  ./check_gcd_script.sh
+                        - run: |
+                                cd ..
+                                cd ..
+                                bash  check_gcd_script.sh
