@@ -4,7 +4,10 @@ jobs:
         check-bats-version:
                 runs-on: ubuntu-latest
                 steps:
+                        - uses: actions/checkout@v2
                         - run: |
                                 cd ..
                                 cd ..
+                                cd ..
+                                echo $GITHUB_WORKSPACE
                                 bash  check_gcd_script.sh
