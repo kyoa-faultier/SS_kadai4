@@ -7,4 +7,5 @@ jobs:
                         - run: |
                                 cd ..
                                 cd ..
+                                ls
                                 bash  check_gcd_script.sh
